@@ -1,0 +1,372 @@
+*{
+	margin: 0;
+	padding: 0;
+  font-family: Arial, sans-serif;
+}
+:root {
+  --border-color: rgb(176, 185, 192);
+  --bg-color: rgb(201, 214, 233);
+  --bg-color2: rgb(236,242,255);
+  --text-color: rgb(32, 65, 98);
+  --text-color2: rgb(39, 69, 119);
+  --text-color3: rgb(77,84,90);
+}
+
+body{
+  display: flex;
+  justify-content: center;
+}
+.Container{
+  display: flex;
+  border: 2.9px solid var(--border-color);
+  border-bottom: none;
+  background-color: var(--bg-color);
+  padding: 30px;
+  text-align: center;
+  width: 700px;
+  height: 140px;
+
+}
+.Container__PerfilPic{
+  position: absolute;
+  border: 10px solid var(--bg-color);
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
+  margin-left: 70px;
+  margin-top: -10px;
+}
+.Container__Fname {
+  position: absolute;
+  color: var(--text-color);
+  font-size: 15px;
+  font-family: Arial, sans-serif; 
+  margin-left: 320px;
+  font-size: 35px;
+}
+
+/* Apellido */
+.Container__Sname {
+  position: absolute;
+  color: var(--text-color);
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  margin-top: 40px;
+  margin-left: 320px;
+  font-size: 35px;
+}
+.Container__Bacherlor{
+  position: absolute;
+  color: var(--text-color);
+  font-size: 35px;
+  margin-left: 320px;
+  margin-top: 80px;
+}
+.Sidebar {
+  background: var(--bg-color2);
+  width: 350px;
+  padding:1rem;
+
+  margin-left: -31px;
+  margin-top: 170px;
+  height: 748px;
+  width: 330px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.Sidebar__Contact{
+  text-align: left;
+  color: var(--text-color);
+  font-size: 25px;
+  margin-top: 40px;
+}
+.Sidebar_Bar{
+  width: 60px;
+  height: 40px;
+  margin-left: -250px;
+  margin-top: -12px;
+}
+.CtnContacts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: -10px;
+  margin-left: -45px;
+}
+
+.CtnContacts__Logo{
+  border-radius: 35%;
+  margin-left: 190px;
+  width: 33px;
+  height: 33px;
+  margin-top: 2px;
+  margin-left: 45px;
+}
+.CtnParagraph{
+  text-align: left;
+  display: grid;
+  gap: 23px;
+  margin-top: 8px;
+  position: absolute;
+}
+.CtnParagraph__Text{
+  color: var(--text-color2);
+  font-weight: bold;
+  margin-left: 85px;
+}
+.CtnSkills{
+  text-align: left;
+  display: grid;
+  gap: 15px;
+  margin-top: 25px;
+  position: absolute;
+}
+.CtnSkills__Logo{
+  text-align: left;
+  margin-left: -13px;
+  margin-top: -48px;
+  width: 33px;
+  height: 33px;
+}
+.CtnSkills__Text{
+  color: var(--text-color2);
+  font-weight: bold;
+  margin-top: -55.2px;
+  margin-left: 10px;
+  text-align: left;
+}
+.EducationTitle{
+  color: var(--text-color);
+  font-size: 25px;
+  margin-top: 200px;
+  text-align: left;
+}
+.CtnEducation__Text{
+  color: var(--text-color3);
+  text-align: left;
+  font-weight: bold;
+  margin-top: -45px;
+  margin-left: 10px;
+}
+.Main{
+  display: grid;
+  background-color:white !important ;
+  margin-top: 212px;
+  width: 420px;
+  padding: 1rem;
+
+}
+.Main__Title{
+  color: var(--text-color);
+  font-size: 25px;
+  margin-top: 3px;
+  margin-right: 190px;
+}
+.Main__TitleExperience{
+  color: var(--text-color);
+  font-size: 17px;
+  margin-top: 20px;
+  margin-right: 190px;
+}
+.Main__Experience{
+  color: var(--text-color);
+  font-size: 25px;
+  margin-right: -120px;
+  margin-top: -31.5px;
+}
+.Main__ExperienceBar{
+  width: 60px;
+  height: 40px;
+  margin-left: 25px;
+  margin-top: -5px;  
+}
+.Main__Bar{
+  width: 60px;
+  height: 40px;
+  margin-left: 20px;
+}
+.Main__Text{
+  text-align: justify; 
+  margin-left: 20px;
+}
+.Main__ExperienceCount{
+  color: var(--text-color2);
+  font-weight: bold;
+  margin-top: 5px;
+  margin-left: -170px;
+}
+.Main__ExperiencePoint{
+  margin-left: 10px;
+  margin-top: -27px;
+  width: 33px;
+  height: 33px;
+}
+.Main__Enterpise{
+  color: var(--text-color2);
+  font-weight: bold;
+  margin-top: -0px;
+  margin-left: -190px;
+}
+.Main__Paragraph{
+  text-align: justify;
+  color: var(--text-color2);
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+@media (max-width: 767px) {
+  body{
+    display: flex;
+    justify-content: center;
+  }
+  .Container {
+    display: flex;
+    width: 100%;
+    margin-left: 0;
+    background:white;
+  }
+  .Container__PerfilPic{
+    width: 130px;
+    height: 130px;
+    margin-top: 30px;
+    margin-left: 5px;
+  }
+  .Container__Fname{
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 150px;
+  }
+  .Container__Sname{
+    margin-top: 80px;
+    font-size: 25px;
+    margin-left: 150px;
+  }
+  .Container__Bacherlor{
+    margin-top: 120px;
+    font-size: 18px;
+    margin-left: 145px;
+  }
+  .Sidebar {
+    width: 100%;
+    padding-right: 30px;
+    text-align: left;
+    height: 700px;
+  }
+  .Sidebar__Contact{
+    margin-top: 10px;
+    margin-left: 26px;
+    font-size: 15px;
+  }
+  .Sidebar_Bar{
+    margin-top: -15px;
+    margin-left: 27px;
+  }
+  .CtnParagraph__Text{
+    font-size: 10px;
+    font-weight: lighter;
+    margin-top: -5.6px;
+    margin-left: 90px;
+  }
+  .CtnContacts__Logo{
+    width: 20px;
+    height: 20px;
+    margin-left: 35px;
+  }
+  .CtnSkills__Text{
+    font-size: 10px;
+    font-weight: lighter;
+    margin-top: -55px;
+    margin-left: 35px;
+  }
+  .CtnSkills__Logo{
+    width: 25px;
+    height: 25px;
+    margin-top: -46px;
+    margin-left: 17px;
+  }
+  .EducationTitle{
+    margin-top: 155px;
+    margin-left: 26px;
+    font-size: 15px;
+  }
+  .CtnEducation__Text{
+    font-size: 10px;
+    font-weight: lighter;
+    margin-left: 30px;
+  }
+  .Main {
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 180px;
+    width: 72%;
+  }
+  .Main__Title{
+    font-size: 13px;
+  }
+  .Main__Bar{
+    margin-left: 20px;
+  }
+  .Main__Text{
+    margin-right: 60px;
+    font-size: 10px;
+  }
+  .Main__TitleExperience{
+    font-size: 10px;
+  }
+  .Main__Experience{
+    margin-left: 30px;
+    font-size: 13px;
+  }
+  .Main__ExperienceCount{
+    margin-left: -6vh;
+    margin-top: -1px;
+    font-size: 15px;
+  }
+  .Main__Enterpise{
+    margin-left: -6vh;
+    font-size: 13px;
+  }
+  .Main__Paragraph{    
+    margin-right: 60px;
+    font-size: 10px;
+  }
+  .Main__ExperiencePoint{
+    margin-top: -25px;
+  }
+  .Main__Bar{  
+   width: 60px;
+   height: 40px;
+   margin-left: 20px;
+  }
+  .CtnParagraph{
+    margin-left: -30px;
+  }
+  .CtnContacts{
+    margin-left: -10px;
+  }
+  .Container__Bacherlor{
+    margin-right: -70px;
+  }
+  .Main__Bar{
+    margin-left: 20px;
+  }
+  .Main__ExperienceBar{
+    margin-left: -280px;
+  }
+  .Main__Title{
+    margin-top: -1px;
+    margin-left: 10px;
+  }
+  .Main__Experience{
+    margin-left: 10px;
+  }
+  .Main__ExperienceBar{
+    margin-left: 13px;
+  }
+  .Main__TitleExperience{
+    margin-left: -920px;
+  }
+  .Main__TitleExperience{
+    margin-top: 3px;
+    margin-left: 10px;
+  }
+}

@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae de Carla Rodriguez</title>
+    <title>Curriculum</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src='alertConfig.js'></script>
   </head>
   <body>
     <div class="Container">
@@ -25,6 +26,9 @@
         <img class="CtnContacts__Logo" src="Web.svg">
       </div>
       <h3 class="Sidebar__Contact">HABILIDADES</h3>
+
+      
+      <div class='divisiones'>
       <img class="Sidebar_Bar" src="Bar-removebg-preview.png">
       <div class="CtnSkills">
         <img class="CtnSkills__Logo" src="Point.svg">
@@ -40,6 +44,9 @@
         <img class="CtnSkills__Logo" src="Point.svg">
         <p class="CtnSkills__Text">Constancia de potencial</p>
       </div>
+    </div>
+
+
       <h3 class="EducationTitle">EDUCACIÓN</h3>
       <img class="Sidebar_Bar" src="Bar-removebg-preview.png">
       <div class="CtnSkills">
@@ -54,23 +61,49 @@
       </div>
     </div>
     <div class="Main">
-      <h3 class="Main__Title">ACERCA DE MÍ</h3>
+      <h3 class="Main__TitleExperience">ACERCA DE MÍ</h3>
       
       <p class="Main__Text">Acertivo y concentrado siempre en mis objetivos , ilustrando el pensamiento sobre la creatividad de todo lo posible hacia un avance de logros y obstaculos superados</p>
 
       <h3 class="Main__TitleExperience">EXPERIENCIA LABORAL</h3>
-   
-      <p class="Main__ExperienceCount">Programación en Css</p>
-      <p class="Main__Enterpise">Diseño Grafico</p>
-      <p class="Main__Enterpise">2011-2018</p>
-      <p class="Main__Paragraph">Ilustrando Pasos y lienzos para la formacion de ideas innovadoras</p>
-      <p class="Main__ExperienceCount">Área de gestion de archivos</p>
-      <p class="Main__Enterpise">2012-2014</p>
-      <p class="Main__Paragraph">Base de datos SQL</p>
-      <p class="Main__ExperienceCount">back-end</p>
-      <p class="Main__Enterpise">Node.js</p>
-      <p class="Main__Enterpise">2010-2024</p>
-      <p class="Main__Paragraph">JavaScript</p>
+
+       <ul class='Sexperiencia'>
+      <li>Programación en Css</li>
+      <li>Diseño Grafico 2011-2018</li>
+      <li>Área de gestion de archivos 2012-2014</li>
+      <li>Base de datos SQL</li>
+      <li>back-end 2010-2024</li>
+      <li>Node.js JavaScript</li>
+       </ul>
+     
+      <section class="formulario">
+        <h3 class="Main__TitleExperience">Formulario</h3>
+
+        <form action="/contacto" method='post' class="formularioo">
+
+            <div class='divInput'>
+                <label>Nombre</label>
+                <input type="text" name="nombre" placeholder="Ingrese Nombre" required>
+            </div>
+
+            <div class='divInput'>
+                <label>Correo</label>
+                <input type="email" name="email" placeholder="Ingrese Email" required>
+            </div>
+
+            <div class='divInput'>
+                <label>Comentario</label>
+                <input type="text" name="comentario" placeholder="Ingrese Comentario" required>
+            </div>
+
+            <div class='divButton'>
+                <button title="Enviar Mensaje" class='button'>Enviar</button>
+            </div>
+
+        </form>
+
+    </section>
     </div>
+<script type="text/javascript" src='funcionalidad.js'></script>
   </body>
 </html>

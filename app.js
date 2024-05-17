@@ -1,37 +1,55 @@
-//importacion de modulos necesarios
 const express = require('express');
+//let handlebars = require('express-handlebars')
 const http = require('http');
 const path = require('path');
-
-const port = 5000;
-//carga diferidanfvhc 
-
 const app = express();
+const Controllers = require('./controllers/controllersContacto.js');
+const controllers = new Controllers();
 
-//configuracion de archivos static
-app.use(express.static(__dirname+'/static'));
-
-//Instancia del server
 const server = http.createServer(app);
+//recursos que se van a cargar en el server 
+app.use(express.static(__dirname+'/static'));//listo
 
+//Configuración de las plantillas
 
-//configuracion de motor de plantillas
-app.set('view engine','ejs');
-app.set('views',path.join(__dirname,'./views'));
+app.set('view engine','ejs');//definimos el motor de plantilla con archivos ejs
+app.set('views',path.join(__dirname,"./views"));//definimos la ruta del motor de plantilla
 
-//configuracion de recuperacion de datos y envio
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:false}));//permite recuperar los valores publicados en un request
 app.use(express.json());
+// Rutas y lógica de tu aplicación
 
 
-app.get('/',(req,res)=>{
-res.render('index');
+app.get('/', async (req, res) => {
+  try {
+    res.render('index');
+  } catch (err) {
+    res.status(500).json({error:'Error el en servidor'});
+  }
 });
-					
 
+app.post('/contacto',async (req,res)=>{
+try{
+const {nombre,email,comentario} = req.body;
+//De esta forma obtenemos la direccion ip que seria ::1 que es la representación de la dirección IP de loopback IPv6 en IPv4 segun randy...
+const ip = req.ip;
+const respuesta = await controllers.add(nombre,email,comentario,ip);
+console.log(`Respuesta de controlador : ${respuesta}`);
+res.status(200);
+}catch(error){
+console.error(error.message);
+res.status(500).json({error:'Error en el servidor'});
+}
 
-server.listen(port,()=> {
+});
 
-console.log(`Servidor corriendo en el puerto ${port}`);
+// Otros endpoints y lógica de tu aplicación
+const port = 3000;
+server.listen(port,()=>{
+  console.log(`Servidor Express iniciado en el puerto ${port}`);
+});
 
-})
+process.on('SIGINT',()=>{
+  db.close();
+  process.exit();
+});
